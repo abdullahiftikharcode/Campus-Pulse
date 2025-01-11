@@ -1,0 +1,10 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/leave_group"
+        android:icon="@drawable/nav_logout"
+        android:title="Leave Group" />
+    <item
+        android:id="@+id/delete_group"
+        android:icon="@android:drawable/ic_delete"
+        android:title="Delete Group" />
+</menu>

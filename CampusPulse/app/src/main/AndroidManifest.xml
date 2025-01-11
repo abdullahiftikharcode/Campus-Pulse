@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.CampusPulse"
+        tools:targetApi="31">
+        <activity
+            android:name=".annoucementdetails"
+            android:exported="false" />
+        <activity
+            android:name=".EventDetail"
+            android:exported="false" />
+        <activity
+            android:name=".create_event"
+            android:exported="false" />
+        <activity
+            android:name=".Edit_Profile"
+            android:exported="false" />
+        <activity
+            android:name=".ClubDetails"
+            android:exported="false"
+            android:label="@string/title_activity_club_details" />
+        <activity
+            android:name=".CreateClub"
+            android:exported="false" />
+        <activity
+            android:name=".createclub"
+            android:exported="false" />
+        <activity
+            android:name=".NavigationDrawer"
+            android:exported="false" />
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NotificationActivity"
+            android:theme="@style/FullscreenDialogTheme" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

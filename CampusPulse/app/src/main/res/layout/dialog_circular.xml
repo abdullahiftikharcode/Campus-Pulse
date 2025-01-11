@@ -1,0 +1,52 @@
+<!-- res/layout/dialog_rounded.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/bg_circular_dialog"
+    android:padding="16dp"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/dialogTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="16dp"
+        android:shadowColor="#000000"
+        android:shadowDx="-2"
+        android:shadowDy="5"
+        android:shadowRadius="2"
+        android:text="Enter Password"
+        android:textColor="#000000"
+        android:textSize="18sp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:endIconMode="password_toggle">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/custom_edittext"
+            android:drawableLeft="@drawable/ic_baseline_lock_24"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:padding="8dp"
+            android:textColor="@color/black"
+            android:textColorHighlight="@color/cardview_dark_background"
+            android:minHeight="50dp"
+            android:textSize="18sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:layout_marginTop="16dp" />
+</LinearLayout>

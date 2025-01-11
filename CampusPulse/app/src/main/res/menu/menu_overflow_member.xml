@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/make_admin"
+        android:icon="@drawable/nav_logout"
+        android:title="Make Admin" />
+    <item
+        android:id="@+id/remove_admin"
+        android:icon="@drawable/nav_logout"
+        android:title="Remove Admin" />
+    <item
+        android:id="@+id/remove_member"
+        android:icon="@drawable/nav_logout"
+        android:title="Remove Member" />
+</menu>

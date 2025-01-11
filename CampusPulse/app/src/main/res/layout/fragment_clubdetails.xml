@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/transparentBg"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:background="#66000000"
+        android:visibility="invisible" />
+
+    <!-- ScrollView containing the content -->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_navigation">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Content goes here -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="132dp"
+                android:layout_weight="0.7">
+
+                <ImageView
+                    android:id="@+id/recImage"
+                    android:layout_width="405dp"
+                    android:layout_height="160dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/recycleimage" />
+
+                <TextView
+                    android:id="@+id/recTitle"
+                    android:layout_width="398dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="#80000000"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="Title"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="131dp"
+                android:layout_weight="0.5"
+                android:background="@drawable/card_border"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/recDesc"
+                    android:layout_width="379dp"
+                    android:layout_height="60dp"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="20dp"
+                    android:text="Description"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/joincode"
+                    android:layout_width="368dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Join Code"
+                    android:textSize="20sp"
+                    app:icon="@drawable/baseline_share_24" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Second CardView inside ScrollView -->
+
+                <LinearLayout
+                    android:id="@+id/append_annoucement"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- BottomNavigationView fixed at the bottom -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_navigation_menu" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/fabConstraint"
+        android:layout_width="211dp"
+        android:layout_height="216dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="466dp"
+        android:layout_marginBottom="60dp"
+        android:minHeight="32dp">
+
+        <!-- Main Floating Action Button -->
+
+        <!-- Gallery Button -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/mainFabBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:tint="@color/purple"
+            app:backgroundTint="@color/purple"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.953"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/baseline_add_24"
+            app:tint="@color/white" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/createevent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:tint="@color/purple"
+            android:visibility="invisible"
+            app:backgroundTint="@color/purple"
+            app:layout_constraintBottom_toTopOf="@id/mainFabBtn"
+            app:layout_constraintEnd_toEndOf="@id/mainFabBtn"
+            app:srcCompat="@drawable/join"
+            app:tint="@color/white" />
+
+        <!-- Gallery Text -->
+        <TextView
+            android:id="@+id/eventtxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/fab_text_bg"
+            android:elevation="8dp"
+            android:paddingHorizontal="32dp"
+            android:paddingVertical="8dp"
+            android:text="Event"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@id/createevent"
+            app:layout_constraintEnd_toStartOf="@id/createevent"
+            app:layout_constraintTop_toTopOf="@id/createevent" />
+
+        <!-- Share Button -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/createannoucement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:tint="@color/purple"
+            android:visibility="invisible"
+            app:backgroundTint="@color/purple"
+            app:layout_constraintBottom_toTopOf="@id/createevent"
+            app:layout_constraintEnd_toEndOf="@id/createevent"
+            app:srcCompat="@drawable/create"
+            app:tint="@color/white" />
+
+        <!-- Share Text -->
+        <TextView
+            android:id="@+id/annoucementtxt"
+            android:layout_width="146dp"
+            android:layout_height="42dp"
+            android:background="@drawable/fab_text_bg"
+            android:elevation="8dp"
+            android:paddingHorizontal="32dp"
+            android:paddingVertical="8dp"
+            android:text="Annoucement"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@id/createannoucement"
+            app:layout_constraintEnd_toStartOf="@id/createannoucement"
+            app:layout_constraintTop_toTopOf="@id/createannoucement" />
+
+        <!-- Send Button -->
+
+        <!-- Send Text -->
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

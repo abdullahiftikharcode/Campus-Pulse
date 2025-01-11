@@ -1,0 +1,96 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/selectableItemBackground"
+    android:orientation="vertical"
+    android:paddingStart="10dp"
+    android:paddingLeft="10dp"
+    android:paddingEnd="5dp"
+    android:paddingRight="10dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="391dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/card_border"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageButton
+                    android:id="@+id/overflowMenumember"
+                    android:layout_width="23dp"
+                    android:layout_height="36dp"
+                    android:layout_gravity="end|top"
+                    android:layout_margin="8dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="menu"
+                    android:elevation="10dp"
+                    android:padding="8dp"
+                    android:paddingTop="10dp"
+                    android:src="@drawable/verticaldot"
+                    app:tint="@color/black" />
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/aklogo" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/eventtype"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:paddingStart="60dp"
+                        android:text="Event type and person name"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/groupname"
+                        android:layout_width="match_parent"
+                        android:layout_height="36dp"
+                        android:maxLines="1"
+                        android:paddingStart="60dp"
+                        android:text="group name"
+                        android:textColor="#676262"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/insetDivider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:paddingTop="0dp"
+        app:dividerColor="@color/grey"
+        app:dividerInsetEnd="10dp"
+        app:dividerInsetStart="16dp" />
+
+</LinearLayout>

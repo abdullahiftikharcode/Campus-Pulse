@@ -1,0 +1,115 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Club Name Input -->
+
+    <!-- Club Description Input -->
+
+    <!-- Create Club Button -->
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="417dp"
+        android:layout_height="64dp"
+        android:background="@color/purple"
+        android:paddingStart="80dp"
+        android:paddingTop="5dp"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/clubNameLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/button_back"
+        android:layout_width="70dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/transparent"
+        android:paddingBottom="10dp"
+        app:icon="@android:drawable/ic_menu_close_clear_cancel"
+        app:iconGravity="start|textStart"
+        app:iconSize="45dp"
+        app:iconTint="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/clubNameLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="184dp"
+        android:hint="Enter Club Name"
+        android:padding="10dp"
+        app:counterEnabled="true"
+        app:counterMaxLength="16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/clubName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/clubDescriptionLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="292dp"
+        android:hint="Enter Club Description"
+        android:padding="10dp"
+        app:counterEnabled="true"
+        app:counterMaxLength="60"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/clubDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/createClubButton"
+        android:layout_width="178dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="68dp"
+        android:text="Create Club"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/clubDescriptionLayout" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="175dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="4dp"
+        android:text="Create Club"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView6"
+        app:layout_constraintEnd_toEndOf="@+id/textView6"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/button_back" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

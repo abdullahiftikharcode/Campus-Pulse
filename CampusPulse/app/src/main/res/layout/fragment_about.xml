@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B79DC5"
+    tools:context=".AboutFragment">
+
+    <!-- ScrollView to make content scrollable on smaller screens -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- App/Company Logo -->
+            <ImageView
+                android:id="@+id/about_logo"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="24dp"
+                android:contentDescription="Company Logo"
+                android:src="@drawable/aklogo" />
+
+            <!-- About Us Title -->
+            <TextView
+                android:id="@+id/about_us_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/alkatra_medium"
+                android:paddingBottom="16dp"
+                android:text="About Our Club Organizer App"
+                android:textColor="#333333"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <!-- Brief Description -->
+            <TextView
+                android:id="@+id/about_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/andada_pro_bold"
+                android:lineSpacingExtra="4dp"
+                android:text="The Club Organizer app allows university clubs to manage events, communicate with members, and handle lost and found items effectively. It's a one-stop solution for streamlining club activities."
+                android:textAlignment="center"
+                android:textColor="#666666"
+                android:textSize="16sp" />
+
+            <!-- Additional Information -->
+            <TextView
+                android:id="@+id/mission_statement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/andada_pro_bold"
+                android:lineSpacingExtra="4dp"
+                android:text="Our mission is to help universities manage club events and communication smoothly, making club operations easier and more efficient."
+                android:textAlignment="center"
+                android:textColor="#666666"
+                android:textSize="16sp" />
+
+            <!-- Contact me at Text -->
+            <TextView
+                android:id="@+id/contact_me"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/aclonica"
+                android:paddingBottom="16dp"
+                android:text="Contact me at"
+                android:textColor="#333333"
+                android:textSize="18sp" />
+
+            <!-- Social Media Buttons -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <!-- Instagram Button -->
+                <Button
+                    android:id="@+id/instagram"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#E4405F"
+                    android:onClick="openInstagram"
+                    android:text="Instagram"
+                    android:textColor="#FFFFFF" />
+
+                <!-- Spacer between buttons -->
+                <Space
+                    android:layout_width="16dp"
+                    android:layout_height="match_parent" />
+
+                <!-- LinkedIn Button -->
+                <Button
+                    android:id="@+id/linkedin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#0077B5"
+                    android:onClick="openLinkedIn"
+                    android:text="LinkedIn"
+                    android:textColor="#FFFFFF" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

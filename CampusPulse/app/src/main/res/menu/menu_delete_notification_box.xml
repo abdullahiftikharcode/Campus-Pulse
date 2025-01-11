@@ -1,0 +1,6 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/delete_box"
+        android:icon="@drawable/nav_logout"
+        android:title="Delete All Notifications" />
+</menu>
